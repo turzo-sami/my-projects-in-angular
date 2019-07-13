@@ -29,6 +29,9 @@ import { RoundNumberPipe } from './Pipes/RoundNumber.pipe';
 import { SortPipe } from './Pipes/Sort.pipe';
 import { ChangeStatusPipe } from './Pipes/ChangeStatus.pipe';
 import { ShortNamePipe } from './Pipes/ShortName.pipe';
+import { DoubleDigit } from './Pipes/DoubleDigit.pipe';
+import { AmountInWords } from './Pipes/AmountInWords.pipe';
+import { NumberToRoman } from './Pipes/NumberToRoman.pipe';
 
 
 
@@ -42,7 +45,7 @@ import { ShortNamePipe } from './Pipes/ShortName.pipe';
       BookList, DisplayBookList, BookEntryForm,
 
       // Pipes
-      FilterPipe, RemoveZeroPipe, RoundNumberPipe, SortPipe, ChangeStatusPipe, ShortNamePipe
+      FilterPipe, RemoveZeroPipe, RoundNumberPipe, SortPipe, ChangeStatusPipe, ShortNamePipe, AmountInWords, DoubleDigit, NumberToRoman
   ],
 
   imports:[

@@ -1,1 +1,36 @@
-<h1>book list</h1>
+<div class="displayBooks">
+
+    <div *ngIf="!BookList || BookList?.length == 0" class="alert alert-danger" role="alert">
+        there is no book in the booklist, please save a book first.
+    </div>
+
+    <div *ngIf="BookList?.length > 0" class="mt-2">
+
+        <ul class="list-group">
+            <ng-container *ngFor="let book of BookList | Sort: 'Author'; let i = index">
+                <li class="list-group-item">
+                    Title: {{book?.Title}} | Author: {{book?.Author}} | Publisher: {{book.Publisher}}
+                </li>
+            </ng-container>
+        </ul>
+
+    </div>
+    
+    <div *ngIf="BookList?.length > 0" class="mt-2">
+
+        <ul class="list-group">
+            <ng-container *ngFor="let book of BookList | Sort: 'Publisher'; let i = index">
+                <li class="list-group-item">
+                    Title: {{book?.Title}} | Author: {{book?.Author}} | Publisher: {{book.Publisher}}
+                </li>
+            </ng-container>
+        </ul>
+
+    </div>
+
+    <!-- <div>
+        <BookEntryForm (valueChange)='displayNewBook($event)'></BookEntryForm>
+    </div> -->
+
+
+</div>
