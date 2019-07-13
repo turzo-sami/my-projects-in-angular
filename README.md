@@ -43,3 +43,12 @@ npm install moment --save
 ## Bootstrap & Jquery
 
 npm install --save bootstrap jquery popper.js
+
+## Gulp
+
+npm install gulp gulp-sass --save-dev
+
+
+## Compile SCSS to CSS
+
+gulp sass or gulp watch

@@ -1,6 +1,6 @@
  
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a onclick="return false;" class="navbar-brand" routerLink="/home">TURZONE</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,23 +11,23 @@
         <ul class="navbar-nav mr-auto">
 
             <li class="nav-item active">
-                <a class="nav-link" routerLink="">Home <span class="sr-only">(current)</span></a>
+                <a onclick="return false;" class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a onclick="return false;" class="nav-link" routerLink="/resume">Resume</a>
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                <a onclick="return false;" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    Dropdown
+                    Projects
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
+                    <a onclick="return false;" class="dropdown-item" routerLink="/vocabhelper">Vocab Helper</a>
+                    <a onclick="return false;" class="dropdown-item" routerLink="/booklist">Book List</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a onclick="return false;" class="dropdown-item" routerLink="">Something else here</a>
                 </div>
             </li>
 

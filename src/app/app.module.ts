@@ -11,6 +11,14 @@ import { Home } from './Components/Home/Home';
 import { Navbar } from './Components/Navbar/Navbar';
 import { NotFound } from './Components/NotFound/NotFound';
 
+import { VocabHelper } from './Components/Projects/VocabHelper/VocabHelper';
+
+// Booklist
+import { BookList } from './Components/Projects/BookList/BookList';
+import { DisplayBookList } from './Components/Projects/BookList/DisplayBookList/DisplayBookList';
+import { BookEntryForm } from './Components/Projects/BookList/BookEntryForm/BookEntryForm';
+
+
 // Services
 import { MasterService } from './Services/master.service';
 
@@ -29,7 +37,9 @@ import { ShortNamePipe } from './Pipes/ShortName.pipe';
       AppComponent,
 
       // Components
-      Home, Navbar, NotFound,
+      Home, Navbar, NotFound, VocabHelper,
+
+      BookList, DisplayBookList, BookEntryForm,
 
       // Pipes
       FilterPipe, RemoveZeroPipe, RoundNumberPipe, SortPipe, ChangeStatusPipe, ShortNamePipe

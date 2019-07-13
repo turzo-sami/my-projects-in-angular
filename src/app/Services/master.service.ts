@@ -4,33 +4,38 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Message } from '../Libraries/Message';
 
 
+const baseURL: string = "/";
 
 @Injectable()
 export class MasterService{
 
-    constructor(private http: HttpClient) { }
+    constructor(private httpClient: HttpClient) { }
 
 
-	get(URL: string) : any{
-		return this.http.get(URL.trim(), this.getHeaders());
+	get(url: string) : any{
+		return this.httpClient.get(this.generateURL(url), this.getHeaders());
 	}
 
-	post(URL: string, Body: any) {
+	post(url: string, Body: any) {
 		Message.clear();
-		return this.http.post(URL.trim(), Body, this.getHeaders());
+		return this.httpClient.post(this.generateURL(url), Body, this.getHeaders());
 	}
 
-	put(URL: string, Body: any) {
+	put(url: string, Body: any) {
 		Message.clear();
-		return this.http.put(URL.trim(), Body, this.getHeaders());
+		return this.httpClient.put(this.generateURL(url), Body, this.getHeaders());
 	}
 
-	delete(URL: string) {
+	delete(url: string) {
 		Message.clear();
-		return this.http.delete(URL.trim(), this.getHeaders());
+		return this.httpClient.delete(this.generateURL(url), this.getHeaders());
 	}
 	
 
+	generateURL(URL: string){
+
+		return baseURL + URL.trim();
+	}
 
     
 	getHeaders() {

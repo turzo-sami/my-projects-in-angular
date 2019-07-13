@@ -1,0 +1,36 @@
+
+<div class="bookEntryForm">
+    
+    <form [formGroup]="bookEntryForm" (ngSubmit)="entryNewBook(bookEntryForm.value)">
+        
+        <div class="form-group">
+            <label for="Title">Title</label>
+            <input type="text" formControlName="Title" required id="Title" class="form-control form-control-sm" placeholder="Enter Book Title">
+        </div>
+        
+        <div class="form-group">
+            <label for="Author">Author</label>
+            <input type="text" formControlName="Author" required id="Author" class="form-control form-control-sm" placeholder="Enter Book Title">
+        </div>
+        
+        <div class="form-group">
+            <label for="Genre">Genre</label>
+            <input type="text" formControlName="Genre" required id="Genre" class="form-control form-control-sm" placeholder="Enter Book Title">
+        </div>
+        
+        <div class="form-group">
+            <label for="Publisher">Publisher</label>
+            <input type="text" formControlName="Publisher" required id="Publisher" class="form-control form-control-sm" placeholder="Enter Book Title">
+        </div>
+        
+        <div class="form-group">
+            <label for="PublishingYear">Publishing Year</label>
+            <input type="text" formControlName="PublishingYear" required id="PublishingYear" class="form-control form-control-sm" placeholder="Enter Book Title">
+        </div>
+        
+        
+        <button type="submit" class="btn btn-sm btn-success" [disabled]="!bookEntryForm.valid">Submit</button>
+        
+    </form>
+
+</div>

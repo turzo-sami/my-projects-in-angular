@@ -8,9 +8,18 @@ import { Home } from './Components/Home/Home';
 import { Navbar } from './Components/Navbar/Navbar';
 import { NotFound } from './Components/NotFound/NotFound';
 
+import { VocabHelper } from './Components/Projects/VocabHelper/VocabHelper';
+import { BookList } from './Components/Projects/BookList/BookList';
+
 const APP_ROUTES: Routes = [
 
-  { path: '', component: Home },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+
+  { path: 'home', pathMatch: 'full', component: Home },
+
+  { path: 'vocabhelper', pathMatch: 'full', component: VocabHelper },
+  { path: 'booklist', pathMatch: 'full', component: BookList },
+  
   { path: '**', component: NotFound },
 
 ];

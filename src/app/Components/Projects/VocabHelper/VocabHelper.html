@@ -1,0 +1,47 @@
+<Navbar></Navbar>
+
+<div class="vocabHelper">
+    
+    <div class="container-fluid">
+
+        
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xl-5 mt-2">
+                
+                <div class="custom-button">
+                    <button class="btn btn-sm" [class.btn-info]="selectedOption == 'Meaning'"   (click)="selectedOption = 'Meaning'; loadVocabData()"  >Meaning</button>
+                    <button class="btn btn-sm" [class.btn-info]="selectedOption == 'Synonym'"   (click)="selectedOption = 'Synonym'; loadVocabData()"  >Synonym</button>
+                    <button class="btn btn-sm" [class.btn-info]="selectedOption == 'Antonym'"   (click)="selectedOption = 'Antonym'; loadVocabData()"  >Antonym</button>
+                    <button class="btn btn-sm" [class.btn-info]="selectedOption == 'Homophone'" (click)="selectedOption = 'Homophone'; loadVocabData()">Homophone</button>
+                    <button class="btn btn-sm" [class.btn-info]="selectedOption == 'Rhyming'"   (click)="selectedOption = 'Rhyming'; loadVocabData()"  >Rhyming</button>
+                </div>
+            
+            </div>
+
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xl-5 mt-2">
+            
+                <input type="text" name="" id="" placeholder="" class="form-control form-control-sm" [(ngModel)]="searchText" (keuyp)="loadVocabData()">
+            
+            </div>
+           
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xl-5 mt-2">
+        
+                <div class=card>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                        
+                </div>
+
+            </div>
+        
+        
+        
+    </div>
+
+</div>
