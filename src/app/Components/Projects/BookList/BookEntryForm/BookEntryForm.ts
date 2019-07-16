@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
 import * as moment from "moment";
@@ -15,7 +15,8 @@ import { Utility } from 'src/app/Libraries/Utility';
 
 export class BookEntryForm implements OnInit {
 
-  @Output() newBookTitle = new EventEmitter<string>();
+  @Input() displayForm: boolean = true;
+  @Output() newBookTitleEmitter = new EventEmitter<string>();
 
   bookEntryForm: FormGroup;
   BookList: BookList[] = [];
@@ -45,10 +46,11 @@ export class BookEntryForm implements OnInit {
   entryNewBook(formValue): void {
     this.BookList.push(formValue);
     LocalStorage.setLocalStorageItem(this.booklistToken, JSON.stringify(this.BookList));
+    this.createBookEntryForm();
     this.onNewEntry(formValue.Title);
   }
 
   onNewEntry(title: string) {
-    this.newBookTitle.emit(title);
+    this.newBookTitleEmitter.emit(title);
   }
 }

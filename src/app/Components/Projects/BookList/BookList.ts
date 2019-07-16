@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 import * as moment from 'moment';
 import * as _ from 'underscore';
@@ -10,10 +10,16 @@ import * as _ from 'underscore';
 
 export class BookList implements OnInit {
 
+    bookTitle: string = "";
+
     constructor() { }
 
     ngOnInit() {
+    }
 
+
+    setNewBookTitle(e){
+        this.bookTitle = e;
     }
 
 }

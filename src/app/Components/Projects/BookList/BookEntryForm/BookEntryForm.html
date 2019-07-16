@@ -1,5 +1,5 @@
 
-<div class="bookEntryForm">
+<div *ngIf="displayForm" class="bookEntryForm">
     
     <form [formGroup]="bookEntryForm" (ngSubmit)="entryNewBook(bookEntryForm.value)">
         
